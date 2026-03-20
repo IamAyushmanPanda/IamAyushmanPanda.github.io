@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ayushman Panda | Student & Creator</title>
+    <title>Ayushman Panda | Student, Gamer & Badminton Player</title>
 
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
@@ -24,11 +24,11 @@
 
         body {
             background: #0f2027;
-            /* A subtle gradient representing the cool vibes of Sikkim */
             background: linear-gradient(135deg, #0f2027 0%, #203a43 50%, #2c5364 100%);
             color: white;
             min-height: 100vh;
             line-height: 1.7;
+            overflow-x: hidden;
         }
 
         .container {
@@ -57,11 +57,17 @@
             object-fit: cover;
             box-shadow: 0 0 35px rgba(0, 198, 255, 0.4);
             transition: 0.5s ease;
+            animation: breathe 3s infinite alternate;
+        }
+
+        @keyframes breathe {
+            0% { box-shadow: 0 0 20px #00c6ff; transform: scale(1); }
+            100% { box-shadow: 0 0 50px #00c6ff; transform: scale(1.02); }
         }
 
         .profile-wrapper img:hover {
             transform: scale(1.05) rotate(3deg);
-            box-shadow: 0 0 50px var(--primary);
+            border-color: white;
         }
 
         h1 {
@@ -78,7 +84,6 @@
             margin-bottom: 30px;
         }
 
-        /* Responsive Grid */
         .main-grid {
             display: grid;
             grid-template-columns: 1fr;
@@ -87,7 +92,8 @@
 
         .card {
             background: var(--glass);
-            backdrop-filter: blur(10px);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
             border: 1px solid var(--border);
             padding: 35px;
             border-radius: 25px;
@@ -104,6 +110,9 @@
             color: var(--primary);
             margin-bottom: 15px;
             font-size: 1.6rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
         }
 
         .highlight {
@@ -126,7 +135,6 @@
             font-size: 0.85rem;
         }
 
-        /* Buttons */
         .social-group {
             display: flex;
             flex-wrap: wrap;
@@ -141,6 +149,8 @@
             font-weight: 600;
             transition: 0.3s;
             text-align: center;
+            flex-grow: 1;
+            max-width: 250px;
         }
 
         .btn-fb { background: #1877F2; color: white; }
@@ -150,9 +160,9 @@
         .btn:hover {
             transform: scale(1.05);
             filter: brightness(1.2);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
         }
 
-        /* Desktop Layout */
         @media (min-width: 850px) {
             .main-grid {
                 grid-template-columns: 1.5fr 1fr;
@@ -185,40 +195,40 @@
             <div class="card">
                 <h3>About Me</h3>
                 <p>
-                    I am a student currently living in the beautiful hills of <span class="highlight">Sikkim</span>. 
+                    I am a student currently living in the peaceful hills of <span class="highlight">Sikkim</span>. 
                     I have a deep passion for the digital world—I don't just love <span class="highlight">playing games</span>, 
-                    I'm actively learning the art of <span class="highlight">building them</span> too! 
+                    I'm actively learning how to <span class="highlight">build them</span> too! 
                 </p>
                 <p style="margin-top: 10px;">
-                    During my holidays, you'll find me deeply immersed in creating <span class="highlight">YouTube gaming videos</span>, 
-                    sharing my gameplay and creativity with the world.
+                    During my holidays, I dedicate my time to creating <span class="highlight">YouTube gaming videos</span>, 
+                    blending my love for gameplay with my creative editing skills.
                 </p>
             </div>
 
             <div class="card">
-                <h3>Off-Screen</h3>
-                <p>When I'm not behind a screen, I'm out on the field. I'm a huge fan of <span class="highlight">Cricket</span> and love nothing more than a competitive match with my friends.</p>
+                <h3>Athlete Life</h3>
+                <p>When I step away from the keyboard, you'll find me on the court. I am a passionate <span class="highlight">Badminton Player</span> and love the fast-paced energy of a good smash!</p>
                 <div class="tags">
-                    <span class="tag">🏏 Cricket</span>
+                    <span class="tag">🏸 Badminton</span>
                     <span class="tag">🥟 Momo Lover</span>
-                    <span class="tag">🎮 Game Dev</span>
+                    <span class="tag">💻 Game Dev</span>
                     <span class="tag">🎬 YouTuber</span>
                 </div>
             </div>
 
             <div class="card full-width">
                 <h3>Connect With Me</h3>
-                <p>Check out my latest videos or follow my journey through the links below!</p>
+                <p>Follow my journey, watch my latest smashes, or check out my game development progress!</p>
                 <div class="social-group">
-                    <a href="#" class="btn btn-fb">Facebook</a>
-                    <a href="#" class="btn btn-yt">YouTube Channel</a>
-                    <a href="#" class="btn btn-ig">Instagram</a>
+                    <a href="https://facebook.com/yourlink" class="btn btn-fb">Facebook</a>
+                    <a href="https://youtube.com/yourlink" class="btn btn-yt">YouTube Channel</a>
+                    <a href="https://instagram.com/yourlink" class="btn btn-ig">Instagram</a>
                 </div>
             </div>
         </main>
 
         <footer>
-            © 2026 Ayushman Panda | Made with ❤️ by Bipun Mamu
+            © 2026 Ayushman Panda | Designed with ❤️ by Bipun Mamu
         </footer>
     </div>
 
