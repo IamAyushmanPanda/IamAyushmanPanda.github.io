@@ -141,6 +141,37 @@
         padding: 30px;
         color: #aaa;
     }
+
+    .profile img {
+        margin-top: 30px;
+        /* Increased size from 180px to 280px */
+        width: 280px; 
+        height: 280px;
+        border-radius: 50%;
+        border: 5px solid #00c6ff;
+        box-shadow: 0 0 30px #00c6ff;
+        transition: 0.5s ease-in-out;
+        object-fit: cover; /* Ensures your photo doesn't look stretched */
+        
+        /* Added a cool "breathing" glow effect */
+        animation: pulseGlow 3s infinite alternate;
+    }
+
+    @keyframes pulseGlow {
+        0% { box-shadow: 0 0 20px #00c6ff; }
+        100% { box-shadow: 0 0 50px #00c6ff, 0 0 20px #0072ff; }
+    }
+
+    .profile img:hover {
+        transform: scale(1.1) rotate(3deg);
+        border-color: #fff;
+    }
+
+    /* Adjusting header spacing for the larger image */
+    header {
+        text-align: center;
+        padding: 60px 20px 40px;
+    }
 </style>
 
 
@@ -149,15 +180,11 @@
 <body>
 
 <header>
+    <div class="profile">
+        <img src="your-photo.jpg" alt="Ayushman Panda">
+    </div>
     <h1>Ayushman Panda 👋</h1>
-    <h2>Student | Gamer 🎮</h2>
-
-
-<div class="profile">
-    <img src="your-photo.jpg" alt="Ayushman Panda">
-</div>
-
-
+    <h2>Student | Gamer | Cricket Enthusiast 🏏</h2>
 </header>
 
 <section>
@@ -175,31 +202,6 @@
     <p>
         Gaming is not just a hobby—it's my passion! I enjoy action, adventure, and competitive games.
     </p>
-</div>
-
-<div class="card">
-    <h3>💡 Skills</h3>
-    <div class="skills">
-        <span>Gaming</span>
-        <span>Basic Coding</span>
-        <span>HTML</span>
-        <span>Learning Tech</span>
-    </div>
-</div>
-
-<div class="card">
-    <h3>🚀 Projects</h3>
-    <div class="projects">
-        <div class="project-card">
-            <h4>My First Website</h4>
-            <p>A simple personal website hosted on GitHub Pages.</p>
-        </div>
-
-        <div class="project-card">
-            <h4>Gaming Blog (Coming Soon)</h4>
-            <p>I plan to share gaming tips and experiences.</p>
-        </div>
-    </div>
 </div>
 
 <div class="card">
